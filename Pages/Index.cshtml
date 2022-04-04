@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+
+@{
+    ViewData["Title"] = "Home page";
+    var message = ViewData["check"];
+}
+
+<b><span asp-validation-for="FizzBuzz.Name" class="text-danger"></span></b>
+<b><span asp-validation-for="FizzBuzz.Year"  class="text-danger"></span></b>
+
+<div class="text-left">
+    <h1 class="display-4">Cześć @Model.Name</h1>
+    <p>Podaj imię oraz rok urodzenia</p>
+    <form method="post">
+        <label asp-for="FizzBuzz.Name"></label><br />
+        <input asp-for="FizzBuzz.Name"/><br />
+        <label asp-for="FizzBuzz.Year"></label><br />
+        <input asp-for="FizzBuzz.Year"/><br />
+        <input type="submit" value="Zatwierdź" name="przycisk" class="btn btn-primary mb-2">
+    </form>
+    <div class="alert alert-success" role="alert">
+       @message
+    </div>
+</div>

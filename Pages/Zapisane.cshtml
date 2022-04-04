@@ -1,0 +1,17 @@
+﻿@page
+@model FizzBuzzWeb.Pages.ZapisaneModel
+@{
+    ViewData["Title"] = "Data in session";
+}
+@if (Model.FizzBuzzList != null)
+{
+    @foreach (var person in Model.FizzBuzzList)
+    {
+        <div class="text-center">  
+            <p>@person.Name, @person.Year @person.description</p>
+        </div>
+    }
+    
+}
+
+
