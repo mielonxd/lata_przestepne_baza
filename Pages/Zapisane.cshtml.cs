@@ -9,13 +9,13 @@ namespace FizzBuzzWeb.Pages
 {
     public class ZapisaneModel : PageModel
     {
-        public List<FizzBuzz>? FizzBuzzList { get; set; }
+        public List<Person>? FizzBuzzList { get; set; }
         public void OnGet()
         {
             var data = HttpContext.Session.GetString("Data");
             if (data != null)
             {
-                FizzBuzzList = JsonConvert.DeserializeObject<List<FizzBuzz>>(data);
+                FizzBuzzList = JsonConvert.DeserializeObject<List<Person>>(data);
             }
         }
     }

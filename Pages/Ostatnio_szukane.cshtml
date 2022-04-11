@@ -1,0 +1,10 @@
+﻿@page
+@model Ostatnio_szukaneModel
+@foreach (var person in Model.People)
+{
+    <p>@Html.DisplayFor(modelItem => person.FirstName)
+    @Html.DisplayFor(modelItem => person.LastName)
+    @Html.DisplayFor(modelItem => person.Year)
+    @Html.DisplayFor(modelItem => person.localDate)
+    </p>
+}
